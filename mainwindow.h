@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "opengl.h"
 
 namespace Ui {
 class MainWindow;
@@ -15,8 +16,12 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void on_spinBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
+    opengl *opgl;
 };
 
 #endif // MAINWINDOW_H
